@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
+:root {
+    /* colors */
+    --bg-page:hsl(207, 29%, 94%);
+    --primary:hsl(201, 81%, 51%);
+    --primary-10:hsl(201, 81%, 51%, 10%);
+    --primary-20:hsl(201, 81%, 51%, 20%);
+    --primary-30:hsl(201, 81%, 51%, 30%);
+    --accent:hsl(245, 66%, 35%);
+    --text:hsl(200, 82%, 2%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +17,65 @@
 
 body {
     font-family: "Lexend", sans-serif;
+    font-weight: normal;
+    background-color: var(--bg-page);
+    color: var(--text);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-20);
+    padding: 0rem;
+    height: 100svh;
+}
+
+.web-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 1rem;
+}
+
+#logo {
+    height: 4rem;
+}
+
+.web-info p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: star;
+    gap: 2rem;
+}
+
+.item:hover {
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.item i {
+    font-size: 1.5rem;
+}
+
+.item p {
+    font-size: 1.1rem;
 }
